@@ -1,4 +1,5 @@
 # REST SpringBoot com Java
 
-Após um bom tempo de estudo irei botar em pratica todo meu conhecimento, porém irei realizar o projeto apenas para fixar mais o conhecimento, sem necessáriamente possuir um caminho complexo para realizar o CRUD, estou realizando esse projeto puramente para pratica.
-Próximo projeto que irei realizar será um Front-End para depois realizar o Bakc-End, e neste projeto irei realizar a construção da aplicação com mais complexidade e profissionalismo.
+   Após um período intenso de estudo, irei colocar em prática todo o meu conhecimento. Inicialmente, realizarei um projeto para consolidar o que aprendi, focando na prática do CRUD de forma complexa, sem a necessidade de informar caminhos completos da Web para poder realizar os testes no Postman. Este projeto é puramente para treino.
+   
+   Em seguida, planejo desenvolver um projeto de Front-End. Depois, construirei uma aplicação Back-End, onde aplicarei maior complexidade e profissionalismo.
