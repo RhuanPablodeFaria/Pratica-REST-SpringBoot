@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 public class UserService {
 
 	private final UserRepository userRepository;
-	
+
 	@Transactional
 	public User salvar(User user) {
 		return userRepository.save(user);
@@ -23,31 +23,31 @@ public class UserService {
 
 	@Transactional(readOnly = true)
 	public User findId(Long id) {
-		return userRepository.findById(id).orElseThrow( () -> new RuntimeException("Usuário não localizado"));
+		return userRepository.findById(id).orElseThrow(() -> new RuntimeException("Usuário não localizado"));
 	}
 
 	@Transactional(readOnly = true)
 	public List<User> findAll() {
 		return userRepository.findAll();
 	}
-	
+
 	@Transactional
-    public User editPassword(Long id, String currentPassword, String newPassword, String confirmPassword) {
-		
+	public User editPassword(Long id, String currentPassword, String newPassword, String confirmPassword) {
+
 		User user = findId(id);
-		
-		if(!user.getPassword().equals(currentPassword)) {
+
+		if (!user.getPassword().equals(currentPassword)) {
 			throw new RuntimeException("Your password doesn`t match");
 		}
-		
+
 		if (!newPassword.equals(confirmPassword)) {
 			throw new RuntimeException("The new password doesn`t match the current password");
 		}
 		user.setPassword(newPassword);
 		return user;
 	}
-	
-	public void altesActiveStatus(Long id) {
+
+	public void alterActiveStatus(Long id) {
 		userRepository.updateActiveUserById(id);
 	}
 }
